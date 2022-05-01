@@ -9,11 +9,11 @@ namespace 水准
     class Station
     {
         public double Height_difference;//高差
-        public string Hsd;
-        public string Qsd;
-        public double StationNum;
-        public double V;
-        public double Corrected_elevation_difference;
+        public string Hsd;//后视点
+        public string Qsd;//前视点
+        public double StationNum;//测站数
+        public double V;//改正数
+        public double Corrected_elevation_difference;//实际高差
 
 
         //构造函数
@@ -26,9 +26,9 @@ namespace 水准
 
         }
         //将获取的测站转化为点号
-        public Point Specialization_to_pointnumber(Station temp)
+        public Point Specialization_to_pointnumber()
         {
-            Point res = new Point(temp.Hsd);
+            Point res = new Point(Hsd);
             return res;
         }
         //计算改正后高差

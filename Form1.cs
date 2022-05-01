@@ -63,7 +63,7 @@ namespace 水准
                     //写入表格
                     foreach(Station s in data_list_station)//将每一个测站转化为对应的点
                     {
-                        Point p1 = new Point(s.Hsd);
+                        Point p1 = s.Specialization_to_pointnumber();
                         data_point.Add(p1);
                     }
                     Point p = new Point(data_list_station[data_list_station.Count-1].Qsd);
@@ -191,7 +191,8 @@ namespace 水准
                 }
                 for (int i = 0; i < data_list_station.Count; i++)
                 {
-                    data_list_station[i].V = (data_list_station[i].StationNum / all_station) * Closure_difference;//计算改正数
+                    //计算改正数
+                    data_list_station[i].V = (data_list_station[i].StationNum / all_station) * Closure_difference;
                     data_list_station[i].calc_correct();
                 }
                 int col = 1;
@@ -207,7 +208,8 @@ namespace 水准
                 int range_write = 2;
                 for (int i = 1; i < data_point.Count - 1; i++)
                 {
-                    data_point[i].Altitude = data_list_station[range].Corrected_elevation_difference + start_station_height;
+                    data_point[i].Altitude = data_list_station[range].Corrected_elevation_difference 
+                        + start_station_height;
                     dataGridView1.Rows[range_write].Cells[5].Value = data_point[i].Altitude;
                     range++;
                     range_write += 2;
@@ -227,7 +229,8 @@ namespace 水准
                 int n = data_point.Count;
                 richTextBox1.Text = "---------------------------报告--------------------------------\r\n";
                 richTextBox1.Text += "已知点信息：\r\n";
-                richTextBox1.Text += "点名： " + data_point[0].Name + "       高程: " + data_point[0].Altitude + "\r\n";
+                richTextBox1.Text += "点名： " + data_point[0].Name + "       高程: " 
+                    + data_point[0].Altitude + "\r\n";
                 richTextBox1.Text += "点名： " + data_point[data_point.Count - 1].Name 
                     + "       高程: " + data_point[data_point.Count - 1].Altitude + "\r\n";
                 richTextBox1.Text += "近似平差结果：\r\n";
