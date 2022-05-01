@@ -1,0 +1,10 @@
+D:\abcin\code\vs\水准\obj\Debug\水准.csproj.AssemblyReference.cache
+D:\abcin\code\vs\水准\obj\Debug\水准.Form1.resources
+D:\abcin\code\vs\水准\obj\Debug\水准.Properties.Resources.resources
+D:\abcin\code\vs\水准\obj\Debug\水准.csproj.GenerateResource.cache
+D:\abcin\code\vs\水准\obj\Debug\水准.csproj.CoreCompileInputs.cache
+D:\abcin\code\vs\水准\bin\Debug\水准.exe.config
+D:\abcin\code\vs\水准\bin\Debug\水准.exe
+D:\abcin\code\vs\水准\bin\Debug\水准.pdb
+D:\abcin\code\vs\水准\obj\Debug\水准.exe
+D:\abcin\code\vs\水准\obj\Debug\水准.pdb
