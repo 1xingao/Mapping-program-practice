@@ -16,7 +16,7 @@ namespace 水准
         List<Station> data_list_station = new List<Station>();//保存所有测站信息
         double start_station_height;
         double end_station_height;
-        List<Point> data_point = new List<Point>();
+        readonly List<Point> data_point = new List<Point>();
         bool canAdjustment = false;
         double all_station = 0;
         double Closure_difference = 0;
@@ -39,6 +39,7 @@ namespace 水准
             
             if(openFileDialog1.ShowDialog() == DialogResult.OK)
             {
+                #region openfile
                 try
                 {
                     path = openFileDialog1.FileName;
@@ -94,6 +95,7 @@ namespace 水准
                 {
                     MessageBox.Show(a.Message);
                 }
+                #endregion
             }
         }
 
@@ -122,7 +124,8 @@ namespace 水准
 
         private void 保存文件ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if(richTextBox1.Text == "")
+            #region savefile
+            if (richTextBox1.Text == "")
             {
                 MessageBox.Show("无报告！");
                 return;
@@ -142,10 +145,12 @@ namespace 水准
                 MessageBox.Show("Save Failed!");
 
             }
+            #endregion
         }
 
         private void 计算闭合差ToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            #region calc
             try
             {
                 if (data_list_station.Count == 0)
@@ -178,7 +183,8 @@ namespace 水准
             {
                 MessageBox.Show("计算闭合差失败！");
             }
-         }
+            #endregion
+        }
 
         private void 平差ToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -192,7 +198,7 @@ namespace 水准
                 for (int i = 0; i < data_list_station.Count; i++)
                 {
                     //计算改正数
-                    data_list_station[i].V = (data_list_station[i].StationNum / all_station) * Closure_difference;
+                    data_list_station[i].V = (data_list_station[i].StationNum / all_station) * -Closure_difference;
                     data_list_station[i].calc_correct();
                 }
                 int col = 1;
@@ -245,9 +251,100 @@ namespace 水准
             }
             catch
             {
-                MessageBox.Show("无平差结果无法生成报告");
+                MessageBox.Show("无平差结果无法生成报告!");
             }
             
+        }
+
+        private void 严密平差ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (canAdjustment == false)
+                {
+                    MessageBox.Show("未计算闭合差 或者 数据超限，不能进行平差！");
+                    return;
+                }
+                int station = data_list_station.Count;//测段数
+                Matrix B = new Matrix(station, data_point.Count-2);
+                Matrix L = new Matrix(station, 1);
+                int range = 0;
+                double start = start_station_height;
+                Dictionary<string, double> map1 = new Dictionary<string, double>();
+                foreach (Point p in data_point)
+                {
+                    map1.Add(p.Name, p.Altitude);
+                }
+                for(int i = 0; i < station-1; i++)
+                {
+                    map1[data_list_station[i].Qsd] = start + data_list_station[i].Height_difference;
+                    start = map1[data_list_station[i].Qsd];
+                }
+                var tem = new double[data_list_station.Count];
+                
+                for (int i = 0; i < data_list_station.Count; i++)
+                {
+                    if (IsYzd(data_list_station[i].Hsd))
+                    {
+                        B[i, Convert.ToInt32(data_list_station[i].Qsd)-1] = 1;
+                    }
+                    else if (IsYzd(data_list_station[i].Qsd))
+                    {
+                        B[i, Convert.ToInt32(data_list_station[i].Hsd)-1] = -1;
+                    }
+                    else
+                    {
+                        B[i, Convert.ToInt32(data_list_station[i].Hsd) - 1] = -1;
+                        B[i, Convert.ToInt32(data_list_station[i].Qsd) - 1] = 1;
+                    }
+                    L[i, 0] = map1[data_list_station[i].Qsd] - map1[data_list_station[i].Hsd] - data_list_station[i].Height_difference;
+                    tem[i] = data_list_station[i].StationNum;//p=n/c;c=1
+                }
+                Matrix P = new Matrix(tem);
+                var n = B.Transpose() * P * B;
+                var w = B.Transpose() * P * L;
+                var x = n.Inverse() * w;
+                var v = B * x - L;
+                for(int i = 0; i < data_list_station.Count; i++)
+                {
+                    data_list_station[i].V = -v[i, 0];
+                    data_list_station[i].calc_correct();
+                }
+                int col = 1;
+                //写入高差改正数和改正数
+                for (int i = 0; i < data_list_station.Count; i++)
+                {
+                    dataGridView1.Rows[col].Cells[3].Value = data_list_station[i].V;
+                    dataGridView1.Rows[col].Cells[4].Value = data_list_station[i].Corrected_elevation_difference;
+                    col += 2;
+                }
+                //计算改正后高程并写入
+                range = 0;
+                int range_write = 2;
+                for (int i = 1; i < data_point.Count - 1; i++)
+                {
+                    data_point[i].Altitude = data_list_station[range].Corrected_elevation_difference
+                        + start_station_height;
+                    dataGridView1.Rows[range_write].Cells[5].Value = data_point[i].Altitude;
+                    range++;
+                    range_write += 2;
+                    start_station_height = data_point[i].Altitude;
+                }
+            }
+            catch
+            {
+
+                MessageBox.Show("平差失败！");
+            }
+        }
+        //判断是否为已知点
+        private  bool IsYzd(string s)
+        {
+            if(s == data_point[0].Name || s == data_point[data_point.Count-1].Name)
+            {
+                return true;
+            }
+            return false;
         }
     }
 }

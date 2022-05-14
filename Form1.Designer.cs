@@ -54,6 +54,7 @@ namespace 水准
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.严密平差ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -64,6 +65,7 @@ namespace 水准
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.文件ToolStripMenuItem,
@@ -74,7 +76,7 @@ namespace 水准
             this.退出ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(749, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(776, 35);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -84,20 +86,20 @@ namespace 水准
             this.打开文件ToolStripMenuItem,
             this.保存文件ToolStripMenuItem});
             this.文件ToolStripMenuItem.Name = "文件ToolStripMenuItem";
-            this.文件ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
+            this.文件ToolStripMenuItem.Size = new System.Drawing.Size(68, 31);
             this.文件ToolStripMenuItem.Text = "文件";
             // 
             // 打开文件ToolStripMenuItem
             // 
             this.打开文件ToolStripMenuItem.Name = "打开文件ToolStripMenuItem";
-            this.打开文件ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.打开文件ToolStripMenuItem.Size = new System.Drawing.Size(194, 36);
             this.打开文件ToolStripMenuItem.Text = "打开文件";
             this.打开文件ToolStripMenuItem.Click += new System.EventHandler(this.打开文件ToolStripMenuItem_Click);
             // 
             // 保存文件ToolStripMenuItem
             // 
             this.保存文件ToolStripMenuItem.Name = "保存文件ToolStripMenuItem";
-            this.保存文件ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.保存文件ToolStripMenuItem.Size = new System.Drawing.Size(194, 36);
             this.保存文件ToolStripMenuItem.Text = "保存文件";
             this.保存文件ToolStripMenuItem.Click += new System.EventHandler(this.保存文件ToolStripMenuItem_Click);
             // 
@@ -105,50 +107,51 @@ namespace 水准
             // 
             this.计算ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.计算闭合差ToolStripMenuItem,
-            this.平差ToolStripMenuItem});
+            this.平差ToolStripMenuItem,
+            this.严密平差ToolStripMenuItem});
             this.计算ToolStripMenuItem.Name = "计算ToolStripMenuItem";
-            this.计算ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
+            this.计算ToolStripMenuItem.Size = new System.Drawing.Size(68, 31);
             this.计算ToolStripMenuItem.Text = "计算";
             // 
             // 计算闭合差ToolStripMenuItem
             // 
             this.计算闭合差ToolStripMenuItem.Name = "计算闭合差ToolStripMenuItem";
-            this.计算闭合差ToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.计算闭合差ToolStripMenuItem.Size = new System.Drawing.Size(270, 36);
             this.计算闭合差ToolStripMenuItem.Text = "计算闭合差";
             this.计算闭合差ToolStripMenuItem.Click += new System.EventHandler(this.计算闭合差ToolStripMenuItem_Click);
             // 
             // 平差ToolStripMenuItem
             // 
             this.平差ToolStripMenuItem.Name = "平差ToolStripMenuItem";
-            this.平差ToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.平差ToolStripMenuItem.Size = new System.Drawing.Size(270, 36);
             this.平差ToolStripMenuItem.Text = "平差";
             this.平差ToolStripMenuItem.Click += new System.EventHandler(this.平差ToolStripMenuItem_Click);
             // 
             // 生成报告ToolStripMenuItem
             // 
             this.生成报告ToolStripMenuItem.Name = "生成报告ToolStripMenuItem";
-            this.生成报告ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
+            this.生成报告ToolStripMenuItem.Size = new System.Drawing.Size(108, 31);
             this.生成报告ToolStripMenuItem.Text = "生成报告";
             this.生成报告ToolStripMenuItem.Click += new System.EventHandler(this.生成报告ToolStripMenuItem_Click);
             // 
             // 清屏ToolStripMenuItem
             // 
             this.清屏ToolStripMenuItem.Name = "清屏ToolStripMenuItem";
-            this.清屏ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
+            this.清屏ToolStripMenuItem.Size = new System.Drawing.Size(68, 31);
             this.清屏ToolStripMenuItem.Text = "清屏";
             this.清屏ToolStripMenuItem.Click += new System.EventHandler(this.清屏ToolStripMenuItem_Click);
             // 
             // 帮助ToolStripMenuItem
             // 
             this.帮助ToolStripMenuItem.Name = "帮助ToolStripMenuItem";
-            this.帮助ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
+            this.帮助ToolStripMenuItem.Size = new System.Drawing.Size(68, 31);
             this.帮助ToolStripMenuItem.Text = "帮助";
             this.帮助ToolStripMenuItem.Click += new System.EventHandler(this.帮助ToolStripMenuItem_Click);
             // 
             // 退出ToolStripMenuItem
             // 
             this.退出ToolStripMenuItem.Name = "退出ToolStripMenuItem";
-            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
+            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(68, 31);
             this.退出ToolStripMenuItem.Text = "退出";
             this.退出ToolStripMenuItem.Click += new System.EventHandler(this.退出ToolStripMenuItem_Click);
             // 
@@ -162,7 +165,7 @@ namespace 水准
             this.tabPage2.Location = new System.Drawing.Point(4, 32);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(714, 414);
+            this.tabPage2.Size = new System.Drawing.Size(741, 418);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "报告";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -172,7 +175,7 @@ namespace 水准
             this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.richTextBox1.Location = new System.Drawing.Point(3, 3);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(708, 408);
+            this.richTextBox1.Size = new System.Drawing.Size(735, 412);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
             // 
@@ -182,7 +185,7 @@ namespace 水准
             this.tabPage1.Location = new System.Drawing.Point(4, 32);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(714, 414);
+            this.tabPage1.Size = new System.Drawing.Size(741, 418);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "数据";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -200,12 +203,12 @@ namespace 水准
             this.Column6,
             this.Column5});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 7);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 30;
-            this.dataGridView1.Size = new System.Drawing.Size(708, 408);
+            this.dataGridView1.Size = new System.Drawing.Size(735, 408);
             this.dataGridView1.TabIndex = 0;
             // 
             // Column1
@@ -261,7 +264,6 @@ namespace 水准
             this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabControl1.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Cursor = System.Windows.Forms.Cursors.Arrow;
@@ -272,14 +274,22 @@ namespace 水准
             this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(722, 450);
+            this.tabControl1.Size = new System.Drawing.Size(749, 454);
             this.tabControl1.TabIndex = 1;
             this.tabControl1.Tag = "";
             // 
+            // 严密平差ToolStripMenuItem
+            // 
+            this.严密平差ToolStripMenuItem.Name = "严密平差ToolStripMenuItem";
+            this.严密平差ToolStripMenuItem.Size = new System.Drawing.Size(270, 36);
+            this.严密平差ToolStripMenuItem.Text = "严密平差";
+            this.严密平差ToolStripMenuItem.Click += new System.EventHandler(this.严密平差ToolStripMenuItem_Click);
+            // 
             // Form1
             // 
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(749, 487);
+            this.ClientSize = new System.Drawing.Size(776, 491);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("OPPOSans H", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -328,6 +338,7 @@ namespace 水准
         private System.Windows.Forms.ToolStripMenuItem 平差ToolStripMenuItem;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.ToolStripMenuItem 生成报告ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 严密平差ToolStripMenuItem;
     }
 }
 
