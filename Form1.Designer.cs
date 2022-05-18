@@ -37,6 +37,7 @@ namespace 水准
             this.计算ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.计算闭合差ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.平差ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.严密平差ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.生成报告ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.清屏ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.帮助ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -54,7 +55,6 @@ namespace 水准
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.严密平差ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -65,7 +65,6 @@ namespace 水准
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.文件ToolStripMenuItem,
@@ -76,7 +75,7 @@ namespace 水准
             this.退出ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(776, 35);
+            this.menuStrip1.Size = new System.Drawing.Size(776, 27);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -86,20 +85,20 @@ namespace 水准
             this.打开文件ToolStripMenuItem,
             this.保存文件ToolStripMenuItem});
             this.文件ToolStripMenuItem.Name = "文件ToolStripMenuItem";
-            this.文件ToolStripMenuItem.Size = new System.Drawing.Size(68, 31);
+            this.文件ToolStripMenuItem.Size = new System.Drawing.Size(47, 23);
             this.文件ToolStripMenuItem.Text = "文件";
             // 
             // 打开文件ToolStripMenuItem
             // 
             this.打开文件ToolStripMenuItem.Name = "打开文件ToolStripMenuItem";
-            this.打开文件ToolStripMenuItem.Size = new System.Drawing.Size(194, 36);
+            this.打开文件ToolStripMenuItem.Size = new System.Drawing.Size(130, 24);
             this.打开文件ToolStripMenuItem.Text = "打开文件";
             this.打开文件ToolStripMenuItem.Click += new System.EventHandler(this.打开文件ToolStripMenuItem_Click);
             // 
             // 保存文件ToolStripMenuItem
             // 
             this.保存文件ToolStripMenuItem.Name = "保存文件ToolStripMenuItem";
-            this.保存文件ToolStripMenuItem.Size = new System.Drawing.Size(194, 36);
+            this.保存文件ToolStripMenuItem.Size = new System.Drawing.Size(130, 24);
             this.保存文件ToolStripMenuItem.Text = "保存文件";
             this.保存文件ToolStripMenuItem.Click += new System.EventHandler(this.保存文件ToolStripMenuItem_Click);
             // 
@@ -110,48 +109,58 @@ namespace 水准
             this.平差ToolStripMenuItem,
             this.严密平差ToolStripMenuItem});
             this.计算ToolStripMenuItem.Name = "计算ToolStripMenuItem";
-            this.计算ToolStripMenuItem.Size = new System.Drawing.Size(68, 31);
+            this.计算ToolStripMenuItem.Size = new System.Drawing.Size(47, 23);
             this.计算ToolStripMenuItem.Text = "计算";
             // 
             // 计算闭合差ToolStripMenuItem
             // 
+            this.计算闭合差ToolStripMenuItem.Image = global::水准.Properties.Resources.QQ图片20201104204012;
             this.计算闭合差ToolStripMenuItem.Name = "计算闭合差ToolStripMenuItem";
-            this.计算闭合差ToolStripMenuItem.Size = new System.Drawing.Size(270, 36);
+            this.计算闭合差ToolStripMenuItem.Size = new System.Drawing.Size(151, 30);
             this.计算闭合差ToolStripMenuItem.Text = "计算闭合差";
             this.计算闭合差ToolStripMenuItem.Click += new System.EventHandler(this.计算闭合差ToolStripMenuItem_Click);
             // 
             // 平差ToolStripMenuItem
             // 
+            this.平差ToolStripMenuItem.Image = global::水准.Properties.Resources.QQ图片20201104210652;
             this.平差ToolStripMenuItem.Name = "平差ToolStripMenuItem";
-            this.平差ToolStripMenuItem.Size = new System.Drawing.Size(270, 36);
-            this.平差ToolStripMenuItem.Text = "平差";
-            this.平差ToolStripMenuItem.Click += new System.EventHandler(this.平差ToolStripMenuItem_Click);
+            this.平差ToolStripMenuItem.Size = new System.Drawing.Size(151, 30);
+            this.平差ToolStripMenuItem.Text = "近似平差";
+            this.平差ToolStripMenuItem.Click += new System.EventHandler(this.严密平差ToolStripMenuItem_Click);
+            // 
+            // 严密平差ToolStripMenuItem
+            // 
+            this.严密平差ToolStripMenuItem.Image = global::水准.Properties.Resources.QQ图片20201104210659;
+            this.严密平差ToolStripMenuItem.Name = "严密平差ToolStripMenuItem";
+            this.严密平差ToolStripMenuItem.Size = new System.Drawing.Size(151, 30);
+            this.严密平差ToolStripMenuItem.Text = "严密平差";
+            this.严密平差ToolStripMenuItem.Click += new System.EventHandler(this.严密平差ToolStripMenuItem_Click);
             // 
             // 生成报告ToolStripMenuItem
             // 
             this.生成报告ToolStripMenuItem.Name = "生成报告ToolStripMenuItem";
-            this.生成报告ToolStripMenuItem.Size = new System.Drawing.Size(108, 31);
+            this.生成报告ToolStripMenuItem.Size = new System.Drawing.Size(73, 23);
             this.生成报告ToolStripMenuItem.Text = "生成报告";
             this.生成报告ToolStripMenuItem.Click += new System.EventHandler(this.生成报告ToolStripMenuItem_Click);
             // 
             // 清屏ToolStripMenuItem
             // 
             this.清屏ToolStripMenuItem.Name = "清屏ToolStripMenuItem";
-            this.清屏ToolStripMenuItem.Size = new System.Drawing.Size(68, 31);
+            this.清屏ToolStripMenuItem.Size = new System.Drawing.Size(47, 23);
             this.清屏ToolStripMenuItem.Text = "清屏";
             this.清屏ToolStripMenuItem.Click += new System.EventHandler(this.清屏ToolStripMenuItem_Click);
             // 
             // 帮助ToolStripMenuItem
             // 
             this.帮助ToolStripMenuItem.Name = "帮助ToolStripMenuItem";
-            this.帮助ToolStripMenuItem.Size = new System.Drawing.Size(68, 31);
+            this.帮助ToolStripMenuItem.Size = new System.Drawing.Size(47, 23);
             this.帮助ToolStripMenuItem.Text = "帮助";
             this.帮助ToolStripMenuItem.Click += new System.EventHandler(this.帮助ToolStripMenuItem_Click);
             // 
             // 退出ToolStripMenuItem
             // 
             this.退出ToolStripMenuItem.Name = "退出ToolStripMenuItem";
-            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(68, 31);
+            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(47, 23);
             this.退出ToolStripMenuItem.Text = "退出";
             this.退出ToolStripMenuItem.Click += new System.EventHandler(this.退出ToolStripMenuItem_Click);
             // 
@@ -270,20 +279,13 @@ namespace 水准
             this.tabControl1.Font = new System.Drawing.Font("OPPOSans H", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tabControl1.HotTrack = true;
             this.tabControl1.ItemSize = new System.Drawing.Size(48, 28);
-            this.tabControl1.Location = new System.Drawing.Point(12, 28);
+            this.tabControl1.Location = new System.Drawing.Point(12, 30);
             this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(749, 454);
             this.tabControl1.TabIndex = 1;
             this.tabControl1.Tag = "";
-            // 
-            // 严密平差ToolStripMenuItem
-            // 
-            this.严密平差ToolStripMenuItem.Name = "严密平差ToolStripMenuItem";
-            this.严密平差ToolStripMenuItem.Size = new System.Drawing.Size(270, 36);
-            this.严密平差ToolStripMenuItem.Text = "严密平差";
-            this.严密平差ToolStripMenuItem.Click += new System.EventHandler(this.严密平差ToolStripMenuItem_Click);
             // 
             // Form1
             // 
