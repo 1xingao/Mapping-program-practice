@@ -1,0 +1,10 @@
+D:\abcin\code\vs\Wire adjustment\Wire adjustment\bin\x64\Debug\Wire adjustment.exe.config
+D:\abcin\code\vs\Wire adjustment\Wire adjustment\bin\x64\Debug\Wire adjustment.exe
+D:\abcin\code\vs\Wire adjustment\Wire adjustment\bin\x64\Debug\Wire adjustment.pdb
+D:\abcin\code\vs\Wire adjustment\Wire adjustment\obj\x64\Debug\Wire_adjustment.Form1.resources
+D:\abcin\code\vs\Wire adjustment\Wire adjustment\obj\x64\Debug\Wire_adjustment.Properties.Resources.resources
+D:\abcin\code\vs\Wire adjustment\Wire adjustment\obj\x64\Debug\Wire adjustment.csproj.GenerateResource.cache
+D:\abcin\code\vs\Wire adjustment\Wire adjustment\obj\x64\Debug\Wire adjustment.csproj.CoreCompileInputs.cache
+D:\abcin\code\vs\Wire adjustment\Wire adjustment\obj\x64\Debug\Wire adjustment.exe
+D:\abcin\code\vs\Wire adjustment\Wire adjustment\obj\x64\Debug\Wire adjustment.pdb
+D:\abcin\code\vs\Wire adjustment\Wire adjustment\obj\x64\Debug\Wire adjustment.csproj.AssemblyReference.cache

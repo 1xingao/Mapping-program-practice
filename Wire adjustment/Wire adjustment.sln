@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32413.511
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wire adjustment", "Wire adjustment\Wire adjustment.csproj", "{01E44731-17C2-4C17-80BC-061944F01320}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{EC6E08D3-F139-4EA2-A164-665F6347EC96}"
+	ProjectSection(SolutionItems) = preProject
+		ResTempl1.rct = ResTempl1.rct
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{01E44731-17C2-4C17-80BC-061944F01320}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01E44731-17C2-4C17-80BC-061944F01320}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01E44731-17C2-4C17-80BC-061944F01320}.Debug|x64.ActiveCfg = Debug|x64
+		{01E44731-17C2-4C17-80BC-061944F01320}.Debug|x64.Build.0 = Debug|x64
+		{01E44731-17C2-4C17-80BC-061944F01320}.Debug|x86.ActiveCfg = Debug|x86
+		{01E44731-17C2-4C17-80BC-061944F01320}.Debug|x86.Build.0 = Debug|x86
+		{01E44731-17C2-4C17-80BC-061944F01320}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01E44731-17C2-4C17-80BC-061944F01320}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01E44731-17C2-4C17-80BC-061944F01320}.Release|x64.ActiveCfg = Release|x64
+		{01E44731-17C2-4C17-80BC-061944F01320}.Release|x64.Build.0 = Release|x64
+		{01E44731-17C2-4C17-80BC-061944F01320}.Release|x86.ActiveCfg = Release|x86
+		{01E44731-17C2-4C17-80BC-061944F01320}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4487D17D-78D2-4191-85AB-388BDD15A4AB}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,12 @@
+D:\abcin\code\vs\Matrix\bin\Debug\net5.0\Matrix.deps.json
+D:\abcin\code\vs\Matrix\bin\Debug\net5.0\Matrix.dll
+D:\abcin\code\vs\Matrix\bin\Debug\net5.0\ref\Matrix.dll
+D:\abcin\code\vs\Matrix\bin\Debug\net5.0\Matrix.pdb
+D:\abcin\code\vs\Matrix\obj\Debug\net5.0\Matrix.csproj.AssemblyReference.cache
+D:\abcin\code\vs\Matrix\obj\Debug\net5.0\Matrix.GeneratedMSBuildEditorConfig.editorconfig
+D:\abcin\code\vs\Matrix\obj\Debug\net5.0\Matrix.AssemblyInfoInputs.cache
+D:\abcin\code\vs\Matrix\obj\Debug\net5.0\Matrix.AssemblyInfo.cs
+D:\abcin\code\vs\Matrix\obj\Debug\net5.0\Matrix.csproj.CoreCompileInputs.cache
+D:\abcin\code\vs\Matrix\obj\Debug\net5.0\Matrix.dll
+D:\abcin\code\vs\Matrix\obj\Debug\net5.0\ref\Matrix.dll
+D:\abcin\code\vs\Matrix\obj\Debug\net5.0\Matrix.pdb
