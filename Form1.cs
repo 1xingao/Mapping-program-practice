@@ -127,7 +127,7 @@ namespace 水准
             }
             int num = 1;
             saveFileDialog1.Filter = "(*.txt)|*.txt";
-            saveFileDialog1.FileName = "平差报告" + num;
+            saveFileDialog1.FileName = "平差报告" + num++;
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 string path = saveFileDialog1.FileName;
