@@ -189,7 +189,7 @@ namespace Wire_adjustment
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(103, 57);
-            this.textBox1.MaxLength = 1;
+            this.textBox1.MaxLength = 3;
             this.textBox1.Name = "textBox1";
             this.textBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.textBox1.Size = new System.Drawing.Size(88, 21);
@@ -444,6 +444,7 @@ namespace Wire_adjustment
             this.Column1.HeaderText = "点号";
             this.Column1.MinimumWidth = 8;
             this.Column1.Name = "Column1";
+            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.Column1.Width = 94;
             // 
             // Column2
@@ -451,6 +452,7 @@ namespace Wire_adjustment
             this.Column2.HeaderText = "角度(dd.mmss)";
             this.Column2.MinimumWidth = 8;
             this.Column2.Name = "Column2";
+            this.Column2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.Column2.Width = 110;
             // 
             // Column3
@@ -458,6 +460,7 @@ namespace Wire_adjustment
             this.Column3.HeaderText = "距离";
             this.Column3.MinimumWidth = 8;
             this.Column3.Name = "Column3";
+            this.Column3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.Column3.Width = 93;
             // 
             // groupBox3
@@ -561,11 +564,11 @@ namespace Wire_adjustment
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolStripMenuItem 退出ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 数据格式ToolStripMenuItem;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.ToolStripMenuItem 退出ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 数据格式ToolStripMenuItem;
     }
 }
 

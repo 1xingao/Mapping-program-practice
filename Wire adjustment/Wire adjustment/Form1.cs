@@ -169,7 +169,7 @@ namespace Wire_adjustment
         private void AdjCoor()
         {
             double allS = 0;
-            double fs0 = 5000.0;
+            double fs0 = 2000.0;
             fd0 = fs0;
             foreach (var s in Mss)
             {
@@ -422,7 +422,7 @@ namespace Wire_adjustment
                 result += "点" + data[range++] + ":\tx:" + cla.X.ToString("0.0000") + "--y:" + cla.Y.ToString("0.0000") + "\n";
             }
             result += "角度闭合差：" + fbeta.ToString("0.0000000") + "\t角度限差：" + fb0.ToString("0.0000");
-            result += "\n坐标闭合差：" + fdiret + "\t坐标闭合差：" + fd0;
+            result += "\n坐标闭合差：1/" + fdiret + "\t坐标闭合差：1/" + fd0;
             result += "\n平差后各边方位角:\n";
             range = 0;
             for (int i = 0; i < Azimuth.Length; i++)

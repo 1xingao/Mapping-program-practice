@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Wire_adjustment
 {
@@ -10,13 +6,13 @@ namespace Wire_adjustment
     {
         public double X;
         public double Y;
-        public DatacCass(double x,double y)
+        public DatacCass(double x, double y)
         {
             this.X = x;
             this.Y = y;
         }
     }
-    
+
     class Func//基础转化函数
     {
         // 计算两点距离

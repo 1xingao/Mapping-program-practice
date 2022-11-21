@@ -83,6 +83,16 @@ namespace Wire_adjustment.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap _5848e4a37f5e4fb39f4c4384a9c275231 {
+            get {
+                object obj = ResourceManager.GetObject("5848e4a37f5e4fb39f4c4384a9c275231", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap ce329083a43b4526ac6129f8c651bae5 {
             get {
                 object obj = ResourceManager.GetObject("ce329083a43b4526ac6129f8c651bae5", resourceCulture);

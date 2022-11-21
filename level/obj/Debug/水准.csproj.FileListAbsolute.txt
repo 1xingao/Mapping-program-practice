@@ -18,3 +18,13 @@ D:\abcin\code\leveling\obj\Debug\水准.csproj.GenerateResource.cache
 D:\abcin\code\leveling\obj\Debug\水准.csproj.CoreCompileInputs.cache
 D:\abcin\code\leveling\obj\Debug\水准.exe
 D:\abcin\code\leveling\obj\Debug\水准.pdb
+D:\abcin\code\leveling\level\bin\Debug\水准.exe.config
+D:\abcin\code\leveling\level\bin\Debug\水准.exe
+D:\abcin\code\leveling\level\bin\Debug\水准.pdb
+D:\abcin\code\leveling\level\obj\Debug\水准.csproj.AssemblyReference.cache
+D:\abcin\code\leveling\level\obj\Debug\水准.Form1.resources
+D:\abcin\code\leveling\level\obj\Debug\水准.Properties.Resources.resources
+D:\abcin\code\leveling\level\obj\Debug\水准.csproj.GenerateResource.cache
+D:\abcin\code\leveling\level\obj\Debug\水准.csproj.CoreCompileInputs.cache
+D:\abcin\code\leveling\level\obj\Debug\水准.exe
+D:\abcin\code\leveling\level\obj\Debug\水准.pdb

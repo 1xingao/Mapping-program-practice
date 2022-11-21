@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\abcin\\code\\vs\\Matrix\\Matrix.csproj": {}
+    "D:\\abcin\\code\\leveling\\Matrix\\Matrix.csproj": {}
   },
   "projects": {
-    "D:\\abcin\\code\\vs\\Matrix\\Matrix.csproj": {
+    "D:\\abcin\\code\\leveling\\Matrix\\Matrix.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\abcin\\code\\vs\\Matrix\\Matrix.csproj",
+        "projectUniqueName": "D:\\abcin\\code\\leveling\\Matrix\\Matrix.csproj",
         "projectName": "Matrix",
-        "projectPath": "D:\\abcin\\code\\vs\\Matrix\\Matrix.csproj",
+        "projectPath": "D:\\abcin\\code\\leveling\\Matrix\\Matrix.csproj",
         "packagesPath": "C:\\Users\\藏起来的十七\\.nuget\\packages\\",
-        "outputPath": "D:\\abcin\\code\\vs\\Matrix\\obj\\",
+        "outputPath": "D:\\abcin\\code\\leveling\\Matrix\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\藏起来的十七\\AppData\\Roaming\\NuGet\\NuGet.Config",
