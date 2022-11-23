@@ -108,6 +108,28 @@ namespace 水准
                 }
             }
         }
+        /// <summary>
+        /// 创建一维数据初始化为指定行列数的二维矩阵
+        /// </summary>
+        /// <param name="matrix"></param>
+        /// <param name="row"></param>
+        /// <param name="col"></param>
+        public Matrix(double[] matrix ,int row,int col)
+        {
+            if(matrix.Length != row * col)
+            {
+                return;
+            }
+            Element = new double[row, col];
+            int n = 0;
+            for(int i = 0; i < row; i++)
+            {
+                for(int j = 0; j < col; j++)
+                {
+                    Element[i, j] = matrix[n++];
+                }
+            }
+        }
         #endregion
         #region 矩阵运算
 
